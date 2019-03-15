@@ -1,4 +1,4 @@
-package com.baomidou.mybatisplus.samples.quickstart;
+/*package com.baomidou.mybatisplus.samples.quickstart;
 
 import com.baomidou.mybatisplus.samples.quickstart.entity.User;
 import com.baomidou.mybatisplus.samples.quickstart.mapper.UserMapper;
@@ -28,4 +28,4 @@ public class SampleTest {
         Assert.assertEquals(5, userList.size());
         userList.forEach(System.out::println);
     }
-}
+}*/

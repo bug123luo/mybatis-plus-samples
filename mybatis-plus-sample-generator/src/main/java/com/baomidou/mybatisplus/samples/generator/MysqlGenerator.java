@@ -59,17 +59,21 @@ public class MysqlGenerator {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         gc.setOutputDir(projectPath + "/mybatis-plus-sample-generator/src/main/java");
-        gc.setAuthor("jobob");
+        //gc.setAuthor("jobob");
+        gc.setAuthor("lcc");
         gc.setOpen(false);
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/ant?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        //dsc.setUrl("jdbc:mysql://localhost:3306/ant?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql://112.74.51.194:3306/hww?useUnicode=true&useSSL=false&characterEncoding=utf8");
         // dsc.setSchemaName("public");
-        dsc.setDriverName("com.mysql.jdbc.Driver");
+        //dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("1q2w3e4r");
+        //dsc.setPassword("1q2w3e4r");
+        dsc.setPassword("nihao123");
         mpg.setDataSource(dsc);
 
         // 包配置
@@ -102,13 +106,14 @@ public class MysqlGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        strategy.setSuperEntityClass("com.baomidou.mybatisplus.samples.generator.common.BaseEntity");
+        //strategy.setSuperEntityClass("com.baomidou.mybatisplus.samples.generator.common.BaseEntity");
         strategy.setEntityLombokModel(true);
-        strategy.setSuperControllerClass("com.baomidou.mybatisplus.samples.generator.common.BaseController");
+        //strategy.setSuperControllerClass("com.baomidou.mybatisplus.samples.generator.common.BaseController");
         strategy.setInclude(scanner("表名"));
         strategy.setSuperEntityColumns("id");
         strategy.setControllerMappingHyphenStyle(true);
-        strategy.setTablePrefix(pc.getModuleName() + "_");
+        //strategy.setTablePrefix(pc.getModuleName() + "_");
+        strategy.setTablePrefix("t" + "_");
         mpg.setStrategy(strategy);
         // 选择 freemarker 引擎需要指定如下加，注意 pom 依赖必须有！
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());

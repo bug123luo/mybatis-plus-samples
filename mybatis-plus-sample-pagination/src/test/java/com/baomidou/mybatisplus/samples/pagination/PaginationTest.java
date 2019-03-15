@@ -45,6 +45,7 @@ public class PaginationTest {
 
         System.out.println("json 正反序列化 begin");
         String json = JSON.toJSONString(page);
+        System.out.println("-------------------------------"+json+"-------------------------");
         Page<User> page1 = JSON.parseObject(json, TypeBuilder.newInstance(Page.class).addTypeParam(User.class).build());
         print(page1.getRecords());
         System.out.println("json 正反序列化 end");
