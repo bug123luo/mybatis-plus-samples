@@ -6,7 +6,7 @@ spring:
     schema: classpath:db/schema-h2.sql
     data: classpath:db/data-h2.sql
     #url: jdbc:h2:mem:test
-    url: jdbc:mysql://112.74.51.194:3306/hww?useUnicode=true&useSSL=false&characterEncoding=utf8
+    url: jdbc:mysql://112.74.51.194:3306/hww?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false
     username: root
     #password: test
     password: nihao123

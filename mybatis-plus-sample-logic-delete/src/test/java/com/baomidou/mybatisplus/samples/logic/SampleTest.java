@@ -30,7 +30,7 @@ public class SampleTest {
 
     @Test
     public void testLogicDelete() {
-        userMapper.delete(new QueryWrapper<User>().eq("age", 2));
+        userMapper.delete(new QueryWrapper<User>().eq("age", 24));
     }
 
 }
