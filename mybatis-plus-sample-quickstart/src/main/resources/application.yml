@@ -19,10 +19,15 @@ logging:
     com.baomidou.mybatisplus.samples.quickstart: debug
 
 #springboot ssl tomcat
+#server:
+#  port: 8443
+#  ssl:
+#    key-alias: tomcat
+#    key-store: classpath:keystore.p12
+#    key-store-password: 111111
+#    key-store-type: PKCS12
+
 server:
-  port: 8443
-  ssl:
-    key-alias: tomcat
-    key-store: classpath:keystore.p12
-    key-store-password: 111111
-    key-store-type: PKCS12
+  port: 9090
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml

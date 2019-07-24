@@ -14,5 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ISequenceService extends IService<Sequence> {
 
-	Integer selectSequence(@Param("se") Sequence Sequence);
+	public Integer selectSequence(@Param("se") Sequence Sequence);
 }

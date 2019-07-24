@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.samples.quickstart.service.ISequenceService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * <p>
  *  服务实现类
@@ -17,5 +19,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SequenceServiceImpl extends ServiceImpl<SequenceMapper, Sequence> implements ISequenceService {
-	Integer selectSequence(@Param("se") Sequence Sequence);
+
+	@Resource
+	private SequenceMapper sequenceMapper;
+
+	public Integer selectSequence(@Param("se") Sequence sequence){
+		return sequenceMapper.selectSequence(sequence);
+	}
 }

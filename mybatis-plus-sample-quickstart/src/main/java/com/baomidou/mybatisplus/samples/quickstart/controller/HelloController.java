@@ -1,4 +1,4 @@
-package com.baomidou.mybatisplus.samples.quickstart.Controller;
+package com.baomidou.mybatisplus.samples.quickstart.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
